@@ -1,4 +1,15 @@
 // Assignment code here
+var generatePassword = function() {
+  var promptLength = window.prompt('Please choose a password length between 8-128 characters');
+
+  if(typeof promptLength !== 'number'){
+    window.alert('please enter a number between 8-128');
+  }else {
+    console.log(promptLength);
+    return promptLength;
+    
+  }
+};
 
 
 // Get references to the #generate element
