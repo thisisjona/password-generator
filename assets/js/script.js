@@ -15,7 +15,7 @@ var lengthPrompt = window.prompt("Choose a password length between 8-128 charact
 if(lengthPrompt >= 8 && lengthPrompt <= 128) {
   console.log('thanks!');
   window.alert("success");
-}else if(lengthPrompt < 8 && lengthPrompt > 128) { 
+}else if(lengthPrompt < 8 || lengthPrompt > 128) { 
   window.alert("Please enter a numerical value between 8-128");
   console.log("not within parameters");
   generatePassword();
