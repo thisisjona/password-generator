@@ -1,17 +1,16 @@
 // Assignment code here
+//created global random number function to be used
 var randomNumber = function(min, max) {
   var value = Math.floor(Math.random() * (max - min) + min);
 
   return value;
 };
-//create variable for generated password
-
 
 var specialCharacters =  '!#$%&()*+,-./:;<=>?@"][^_`{}~';
 var numericValues = '1234567890';
 var lowerAlpha = 'abcdefghijklmnopqrstuvwxyz';
 var upperAlpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-//prompt user for password criteria
+//prompt the user for password criteria
 var prompts = function(){
   var charString = [];
   var lowerCase = window.confirm('Would you like to include uppercase letters?');
@@ -36,12 +35,7 @@ var prompts = function(){
   console.log(passwordString); 
   return passwordString ;
 };
-
-
-
-
-
-
+//initial prompt to initialize password generation
 var generatePassword = function() {
 var lengthPrompt = window.prompt("Choose a password length between 8-128 characters");
 var usedChars ;
@@ -59,13 +53,14 @@ if(lengthPrompt >= 8 && lengthPrompt <= 128) {
   generatePassword();
 
 };
+//for loop that pulls from string of characters to be used for the password
 for (var i = 0; i <= lengthPrompt; i++) {
   var randomNumber = Math.floor(Math.random() * usedChars.length);
   password += usedChars.charAt(randomNumber);
 };
 return password;
 };
-//was looking at 3.5 code
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
